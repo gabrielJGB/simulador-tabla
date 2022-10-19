@@ -87,6 +87,7 @@ const update_data = async () => {
     })
 
     await browser.close();
+    console.log(JSON.stringify(data[25]))
 
     fs.writeFileSync(__dirname+'/info_fechas.json', JSON.stringify(data));
 
