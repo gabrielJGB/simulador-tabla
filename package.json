@@ -1,0 +1,26 @@
+{
+  "name": "simulador-tabla",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabrielJGB/simulador-tabla.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gabrielJGB/simulador-tabla/issues"
+  },
+  "homepage": "https://github.com/gabrielJGB/simulador-tabla#readme",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "jsdom": "^20.0.1",
+    "puppeteer": "^19.0.0"
+  }
+}
