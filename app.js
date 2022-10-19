@@ -20,8 +20,8 @@ app.get('/info_fechas', function (req, res) {
 });
 
 
-app.get('/update',(req,res)=>{
-  scrapper.update_data()
+app.get('/update',async (req,res)=>{
+  await scrapper.update_data()
   res.send('Resultados actualizados<br><a href="/">Volver</a>')
 })
 

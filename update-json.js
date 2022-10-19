@@ -8,12 +8,15 @@ const update_data = async () => {
 
     const browser = await puppeteer.launch({
       headless:true,
+      args:['--no-sandbox']
       
     });
 
     
     const page = await browser.newPage();
-    const response = await page.goto('https://es.wikipedia.org/wiki/Campeonato_de_Primera_Divisi%C3%B3n_2022_(Argentina)');
+    const response = await page.goto('https://es.wikipedia.org/wiki/Campeonato_de_Primera_Divisi%C3%B3n_2022_(Argentina)',{
+      waitUntil:'networkidle2'
+    });
     const body = await response.text();
     const { window: { document } } = new jsdom.JSDOM(body);
 
@@ -86,6 +89,7 @@ const update_data = async () => {
 
     fs.writeFileSync(__dirname+'/info_fechas.json', JSON.stringify(data));
 
+    return "Ok"
   } catch (error) {
     console.error(error);
   }
