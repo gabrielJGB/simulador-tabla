@@ -8,7 +8,8 @@ const update_data = async () => {
 
     const browser = await puppeteer.launch({
       headless:true,
-      args:['--no-sandbox']
+      args:['--no-sandbox'],
+      executablePath:"./node_modules/chromium/lib/chromium/chrome-linux/chrome"
       
     });
 
