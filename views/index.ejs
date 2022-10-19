@@ -46,8 +46,11 @@
         }
 
         .main-table td {
-            padding: 4px 0;
+            padding: 10px 2px;
             border: solid 1px #373b3e;
+            text-align: center;
+        }
+        .main-table th{
             text-align: center;
         }
 
@@ -232,20 +235,20 @@
 
     <div class="modal-history">
 
-        <div class="history-container">
+        
 
             <div class="selected-team">
                 <img src="./img/Argentinos.png" alt="" class="">
-                <div class="selected-name">Argentinos</div>
+                <div class="selected-name">Barracas Central</div>
             </div>
 
-            <div style="padding-right: 10px;">vs.</div>
+            <div>vs</div>
 
             <div class="match-row">
                 <div class="match empate">
                     <div class="fecha">Fecha 1 </div>
                     <img src="./img/Argentinos.png" alt="" class="">
-                    <div class="selected-name">Argentinos</div>
+                    <div class="selected-name">Barracas Central</div>
                     <div class="result">
                         
                         <span class="history-local">1</span>-<span class="history-away">1</span>
@@ -398,7 +401,7 @@
                 <div class="match empate">
                     <div class="fecha">Fecha 1 </div>
                     <img src="./img/Argentinos.png" alt="" class="">
-                    <div class="selected-name">Argentinos</div>
+                    <div class="selected-name">Independiente</div>
                     <div class="result">
                         
                         <span class="history-local">1</span>-<span class="history-away">1</span>
@@ -425,7 +428,7 @@
 
 
              
-            </div>
+
 
         </div>
     </div>
@@ -434,15 +437,17 @@
         .modal-history {
             display: flex;
             flex-direction: row;
-            gap: 10px;
+            gap: 7px;
             position: fixed;
+            align-items: center;
             bottom: 0;
             width: 100%;
-            height: 170px;
+            font-size: 13px;
+
             overflow:hidden;
             box-shadow: 0 0 10px black;
-            background-color: #373b3e;
-            
+            background-color: #373b3ee1;
+            padding:5px
         }
         .history-container{
             display: flex;
@@ -453,33 +458,29 @@
         .match-row{
             display: flex;
             flex-direction: row;
-            gap:10px;
-            overflow-x: auto;
-            overflow-y: hidden;
-            padding-bottom: 10px;
+            gap:12px;
+            overflow-y: auto;
+            padding-bottom: 5px;
+            
+        }
+        .match-row img{
+            width:20px;
+            height:20px
         }
         .match{
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px;
-            min-width: 150px;
-            font-size: 14px;
+            text-align: center;
+            padding:2px 10px;
+
+            min-width: max-content;
         }
         .selected-team{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            min-width: 150px;
+            text-align: center;
             border: solid 2px black;
             background-color: #181818;
             border-radius: 10px;
             height: -webkit-fill-available;
-            margin: 14px 8px 39px;
             box-shadow: 0 0 7px #191919;
-            font-size: 14px;
+            padding:7px 15px
         }
         .match{
             transition: all 0.1s;
@@ -503,6 +504,12 @@
         .victoria{
             border:solid 2px  #008900cc;
             box-shadow: 0 0 7px #008900cc;
+        }
+
+        @media screen and (max-width:800px) {
+            .modal-history{
+                font-size: 12px;
+            }
         }
 
     </style>

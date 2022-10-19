@@ -90,7 +90,6 @@ const update_data = async () => {
 
     fs.writeFileSync(__dirname+'/info_fechas.json', JSON.stringify(data));
 
-    return "Ok"
   } catch (error) {
     console.error(error);
   }
