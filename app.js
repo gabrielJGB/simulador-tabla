@@ -22,7 +22,7 @@ app.get('/info_fechas', function (req, res) {
 
 app.get('/update',async (req,res)=>{
   await scrapper.update_data()
-  console.log("APP.JS: ----------------> " + JSON.stringify(info_fechas[26].partidos[10].goles_visitante))
+  // console.log("APP.JS: ----------------> " + JSON.stringify(info_fechas[26].partidos[10].goles_visitante))
   res.redirect('/')
 })
 
