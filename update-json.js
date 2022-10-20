@@ -87,9 +87,11 @@ const update_data = async () => {
     })
 
     await browser.close();
-    console.log(JSON.stringify(data[25]))
+  
+    data[26].partidos[10].goles_visitante = 7
 
-    fs.writeFileSync(__dirname+'/info_fechas.json', JSON.stringify(data));
+    console.log("update-json:-------->"+ JSON.stringify(data[26].partidos[10].goles_visitante))
+    fs.writeFileSync(__dirname +'/info_fechas.json', JSON.stringify(data));
 
   } catch (error) {
     console.error(error);

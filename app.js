@@ -22,7 +22,8 @@ app.get('/info_fechas', function (req, res) {
 
 app.get('/update',async (req,res)=>{
   await scrapper.update_data()
-  res.send('Resultados actualizados<br><a href="/">Volver</a>')
+  console.log("APP.JS: ----------------> " + JSON.stringify(info_fechas[26].partidos[10].goles_visitante))
+  res.redirect('/')
 })
 
 
